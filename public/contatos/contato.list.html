@@ -12,8 +12,8 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
     defer></script>
 
-  <link rel="stylesheet" href="./public/css/style.css">
-  <script type="module" src="./dist/index.js" defer></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../../dist/contatos/contato.list.js" defer></script>
 
   <title>Início - eAgenda Web</title>
 </head>
@@ -21,7 +21,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">eAgenda
+      <a class="navbar-brand" href="../../index.html">eAgenda
         <span class="badge webButtonPink">web</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
@@ -31,14 +31,14 @@
       <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav  me-auto mb-2 mb-lg-0 fw-bold fs-5">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+            <a class="nav-link active" aria-current="page" href="../../index.html">Início</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">Cadastros</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="./public/tarefas/tarefa.list.html">Tarefas</a></li>
-              <li><a class="dropdown-item" href="./public/contatos/contato.list.html">Contatos</a></li>
+              <li><a class="dropdown-item" href="./tarefa.list.html">Tarefas</a></li>
+              <li><a class="dropdown-item" href="#">Contatos</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -51,29 +51,37 @@
     </div>
   </nav>
 
-  <main class="container mt-4 text-bg-body">
-    <section id="introducao">
-      <div class="text-center text-md-start">
-        <div class="row-cols-1 row-cols-md-2 d-flex flex-wrap-reverse align-items-center">
-          <div class="col mt-4 mt-md-0 p-5">
-            <header>
-              <h1 class="fw-bolder">Olá, seja bem-vindo(a)!</h1>
-              <h2 class="fs-3 p-3">A aplicação eAgenda está aqui!</h2>
-              <hr>
-            </header>
-            <article> 
-              <p class="fs-5">Nossa aplicação oferece simplicidade na hora de gerenciar as suas tarefas.</p>
-              <p class="fs-5">Que tal começar cadastrando tarefas ou contatos?</p>
-              <a href="./public/tarefas/tarefa.list.html" id="btnCadastro" class="btn btn-lg btn-primary">Cadastro de Tarefas</a>
-              <a href="./public/contatos/contato.list.html" id="btnCadastro" class="btn btn-lg btn-primary">Cadastro de Contatos</a>
-            </article>
-          </div>
-          <div class="col no-select">
-            <img src="./public/assets/main.svg" class="drop-shadow w-75">
+  <main class="container mt-2 text-bg-body">
+    <div class="text-center text-md-start p-0 p-md-5">
+      <section id="cabecalho">
+        <header>
+          <h1 class="title fw-bold">Contatos</h1>
+          <p class="fs-5 mt-3 text-body fw-semibold">Cadastre seus contatos.</p>
+          <a href="contato.create.html" class="btn btn-lg btn-primary px-5">Novo Contato</a>
+        </header>
+      </section>
+
+      <section id="tabela">
+        <div class="card border-secondary mt-4 p-2">
+          <div class="card-body">
+            <table id="tabela" class="table table-light text-center">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Telefone</th>
+                  <th>Empresa</th>
+                  <th>Cargo</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider"></tbody>
+            </table>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+    </div>
   </main>
 </body>
 

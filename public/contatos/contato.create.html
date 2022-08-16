@@ -13,7 +13,7 @@
     defer></script>
 
   <link rel="stylesheet" href="../css/style.css">
-  <script type="module" src="../../dist/tarefas/tarefa.create.js" defer></script>
+  <script type="module" src="../../dist/contatos/contato.criate.js" defer></script>
 
   <title>Início - eAgenda Web</title>
 </head>
@@ -38,10 +38,10 @@
               data-bs-toggle="dropdown" aria-expanded="false">Cadastros</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="./tarefa.list.html">Tarefas</a></li>
+              <li><a class="dropdown-item" href="#">Contatos</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Contatos</a></li>
               <li><a class="dropdown-item" href="#">Compromissos</a></li>
             </ul>
           </li>
@@ -55,9 +55,9 @@
     <div class="text-center text-md-start p-0 p-md-5">
       <section id="cabecalho">
         <header>
-          <h1 class="title fw-bold">Cadastrar Tarefa</h1>
-          <p class="fs-5 mt-3 text-body fw-semibold">Cadastre suas tarefas diárias por prioridade.</p>
-          <a href="tarefa.create.html" class="btn btn-lg btn-primary px-5">Nova Tarefa</a>
+          <h1 class="title fw-bold">Cadastrar Contato</h1>
+          <p class="fs-5 mt-3 text-body fw-semibold">Cadastre seus contatos.</p>
+          <a href="contato.create.html" class="btn btn-lg btn-primary px-5">Novo Contato</a>
         </header>
 
 
@@ -65,31 +65,30 @@
           <div class="card-body p-5">
             <form class="form mt-3" id="formulario">
               <div class="form-group">
-                <label class="form-label fs-5" for="txtDescricao">Descrição</label>
-                <input id="txtDescricao" class="form-control" type="text" placeholder="Descrição da sua tarefa">
+                <label class="form-label fs-5" for="txtNome">Nome</label>
+                <input id="txtNome" class="form-control" type="text" placeholder="Nome do seu contato">
               </div>
 
-              <div class="form-group mt-4">
-                <label for="rdbPrioridade" class="form-label fs-5">Prioridade</label>
-
-                <div class="form-check">
-                  <input class="form-check-input" value="Baixa" type="radio" name="flexRadioDefault"
-                    id="flexRadioDefault1" checked>
-                  <label class="form-check-label" for="flexRadioDefault1">Baixa</label>
-                </div>
-
-                <div class="form-check">
-                  <input class="form-check-input" value="Media" type="radio" name="flexRadioDefault"
-                    id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">Média</label>
-                </div>
-
-                <div class="form-check">
-                  <input class="form-check-input" value="Alta" type="radio" name="flexRadioDefault"
-                    id="flexRadioDefault3">
-                  <label class="form-check-label" for="flexRadioDefault3">Alta</label>
-                </div>
+              <div class="form-group">
+                <label class="form-label fs-5" for="txtEmail">E-mail</label>
+                <input id="txtEmail" class="form-control" type="email" placeholder="E-mail do seu contato">
               </div>
+
+              <div class="form-group">
+                <label class="form-label fs-5" for="txtTelefone">Telefone</label>
+                <input id="txtTelefone" class="form-control" type="text" placeholder="Telefone do seu contato">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label fs-5" for="txtEmpresa">Empresa</label>
+                <input id="txtEmpresa" class="form-control" type="text" placeholder="Empresa do seu contato">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label fs-5" for="txtCargo">Cargo</label>
+                <input id="txtCargo" class="form-control" type="text" placeholder="Cargo do seu contato">
+              </div>
+
             </form>
           </div>
           <div class="card-footer px-3 text-center text-md-end">
