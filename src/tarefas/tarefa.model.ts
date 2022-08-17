@@ -6,9 +6,13 @@ export class Tarefa extends EntidadeBase {
   public dataCricao: Date;
   public prioridade: Prioridade;
 
-  constructor(descricao: string, prioridade: Prioridade)
-  {
+  constructor(descricao: string, prioridade: Prioridade, id?: string) {
     super();
+
+    if (id) {
+      this.id = id;
+    }
+
     this.descricao = descricao;
     this.dataCricao = new Date();         
     this.prioridade = prioridade;    

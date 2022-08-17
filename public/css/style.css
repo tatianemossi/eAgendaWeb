@@ -20,6 +20,20 @@ body {
   background-color: #d57edf;
   border-color: #d57edf;
   color: black;
+  transition: .3s ease-in-out;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  border-color: #e19be9;
+  color: black;
+}
+
+.btn-secondary:hover {
+  background-color: #d57edf;
+  border-color: #fcfcfc;
+  color: black;
+  transition: .3s ease-in-out;
 }
 
 .drop-shadow {
@@ -40,8 +54,9 @@ body {
 }
 
 tbody > tr:hover > * {
-  background-color: #d57edf !important;
-  color: rgb(255, 255, 255) !important;
+  background-color: #f1d5eb60 !important;
+  color: black !important;
+  transition: .3s ease-in-out;
 }
 
 a {
