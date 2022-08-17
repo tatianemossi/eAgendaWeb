@@ -58,7 +58,6 @@ class TarefaPaginaListagem implements IPaginaHTML, IPaginaListagem {
 
       celulaBotoes.appendChild(btnEditar);
       celulaBotoes.appendChild(btnExcluir);
-
     })
   }
 }

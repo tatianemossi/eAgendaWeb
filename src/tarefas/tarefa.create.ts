@@ -8,8 +8,8 @@ import { TarefaRepositorioLocalStorage } from "./tarefa.repositorio.local-storag
 class TarefaPaginaCadastro implements IPaginaHTML, IPaginaFormulario {
 
   private txtDescricao: HTMLInputElement;
-  private btnSalvar: HTMLButtonElement;
   private rdbPrioridade: HTMLInputElement;
+  private btnSalvar: HTMLButtonElement;
 
   private idSelecionado: string;
 

@@ -59,4 +59,4 @@ export class TarefaRepositorioLocalStorage implements IRepositorio<Tarefa>, IRep
   public selecionarPorId(id: string): Tarefa | undefined{
     return this.tarefas.find(x => x.id === id);
   }
-}
+} 

@@ -1,3 +1,4 @@
+import { Guid } from "../shared/guid.model.js";
 import { IRepositorioSerializavel } from "../shared/repositorio-serializavel.interface.js";
 import { IRepositorio } from "../shared/repositorio.interface.js";
 import { Contato } from "./contato.model.js";
@@ -6,7 +7,7 @@ export class ContatoRepositorioLocalStorage implements IRepositorio<Contato>, IR
 
   private readonly localStorage: Storage;
 
-  private readonly contatos: Contato[];
+  private contatos: Contato[];
 
   constructor() {
     this.localStorage = window.localStorage;
@@ -21,7 +22,30 @@ export class ContatoRepositorioLocalStorage implements IRepositorio<Contato>, IR
   }
 
   public inserir(registro: Contato): void {
+    registro.id = new Guid().gerarNovoId();
+
     this.contatos.push(registro);
+    this.gravar();
+  }
+
+  public editar(id: string, registro: Contato): void {
+    const indexSelecionado = this.contatos.findIndex(x => x.id === id);
+
+    this.contatos[indexSelecionado] = {
+      id: id, 
+      nome: registro.nome,
+      email: registro.email,
+      telefone: registro.telefone,
+      empresa: registro.empresa,
+      cargo: registro.cargo
+    }
+
+    this.gravar();
+  }
+
+  public excluir(id: string): void {
+    this.contatos = this.contatos.filter(x => x.id !== id);
+
     this.gravar();
   }
 
@@ -32,5 +56,9 @@ export class ContatoRepositorioLocalStorage implements IRepositorio<Contato>, IR
       return [];
 
       return JSON.parse(dados);
+  }
+
+  public selecionarPorId(id: string): Contato | undefined{
+    return this.contatos.find(x => x.id === id);
   }
 }
