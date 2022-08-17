@@ -34,7 +34,6 @@ class ContatoPaginaCadastro implements IPaginaHTML, IPaginaFormulario {
     this.txtTelefone.value = contatoSelecionado.telefone;
     this.txtEmpresa.value = contatoSelecionado.empresa;
     this.txtCargo.value = contatoSelecionado.cargo;
-
   }
 
   configurarElementos(): void {
